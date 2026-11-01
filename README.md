@@ -61,7 +61,18 @@ LSPosed 管理器的日志中也会有 `BetterBackground:` 开头的记录。
 ./gradlew assembleRelease
 ```
 
-release 包默认用 debug 签名，可以直接安装；要正式发布请换成自己的签名配置。
+打包好的 APK 发布在 [Releases](https://github.com/aipiao-gh/BetterBackground/releases)。
+
+自行编译时，在仓库根目录创建 `keystore.properties`（已被 `.gitignore` 忽略）即可使用自己的签名：
+
+```properties
+storeFile=/path/to/your.jks
+storePassword=******
+keyAlias=your-alias
+keyPassword=******
+```
+
+没有这个文件时会退回 debug 签名，签名与 Releases 中的版本不同，不能覆盖安装。
 
 ## 许可
 
