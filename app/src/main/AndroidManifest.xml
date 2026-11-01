@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- 只有本模块（同签名）能给系统框架发同步广播、能读取桥接 Provider；system_server 天然拥有所有权限 -->
+    <permission
+        android:name="com.betterbackground.permission.BRIDGE"
+        android:protectionLevel="signature" />
+
+    <uses-permission android:name="com.betterbackground.permission.BRIDGE" />
+
+    <application
+        android:allowBackup="false"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.BetterBackground">
+
+        <meta-data
+            android:name="xposedmodule"
+            android:value="true" />
+        <meta-data
+            android:name="xposeddescription"
+            android:value="分别设置深色/亮色模式壁纸，切换模式时自动更换（HyperOS）" />
+        <meta-data
+            android:name="xposedminversion"
+            android:value="93" />
+        <meta-data
+            android:name="xposedscope"
+            android:resource="@array/xposed_scope" />
+
+        <activity
+            android:name=".ui.MainActivity"
+            android:exported="true"
+            android:launchMode="singleTask">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+                <category android:name="de.robv.android.xposed.category.MODULE_SETTINGS" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".crop.CropActivity"
+            android:exported="false"
+            android:theme="@style/Theme.BetterBackground.Crop" />
+
+        <provider
+            android:name=".bridge.BridgeProvider"
+            android:authorities="com.betterbackground.bridge"
+            android:exported="true"
+            android:permission="com.betterbackground.permission.BRIDGE" />
+    </application>
+</manifest>

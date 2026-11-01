@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.BetterBackground" parent="Theme.Material3.DayNight.NoActionBar" />
+
+    <!-- 编辑器始终用深色，避免浅色主题下黑底看不清控件 -->
+    <style name="Theme.BetterBackground.Crop" parent="Theme.Material3.Dark.NoActionBar">
+        <item name="android:navigationBarColor">@android:color/black</item>
+    </style>
+</resources>

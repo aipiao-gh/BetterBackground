@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">深浅壁纸</string>
+    <string name="subtitle">为深色模式和亮色模式分别设置壁纸，切换模式时自动更换</string>
+    <string name="enable_title">启用自动切换</string>
+    <string name="enable_desc">关闭后系统切换深浅色时不再更换壁纸</string>
+    <string name="mode_light">亮色模式</string>
+    <string name="mode_light_desc">系统处于浅色时使用</string>
+    <string name="mode_dark">深色模式</string>
+    <string name="mode_dark_desc">系统处于深色时使用</string>
+    <string name="slot_home">桌面</string>
+    <string name="slot_lock">锁屏</string>
+    <string name="slot_pick">点击选择图片</string>
+    <string name="slot_remove">移除</string>
+    <string name="lock_title">锁屏壁纸</string>
+    <string name="lock_none">不修改</string>
+    <string name="lock_same">同桌面</string>
+    <string name="lock_custom">单独设置</string>
+    <string name="slot_adjust">点击调整位置</string>
+    <string name="slot_replace">更换图片</string>
+    <string name="apply">保存并立即应用</string>
+    <string name="crop_hint">双指缩放、拖动调整位置；双击在「铺满屏幕」和「完整显示」间切换</string>
+    <string name="crop_fill">空白处</string>
+    <string name="crop_fill_blur">模糊填充</string>
+    <string name="crop_fill_black">黑色</string>
+    <string name="crop_cancel">取消</string>
+    <string name="crop_reset">复位</string>
+    <string name="crop_done">完成</string>
+    <string name="tips">使用说明：\n1. 在 LSPosed 中启用本模块，作用域勾选「系统框架」，重启手机。\n2. 分别为亮色、深色选择壁纸；比例与屏幕不符时，点击预览图可调整显示位置与大小。最后点击「保存并立即应用」。\n3. 之后无论手动切换还是定时切换深色模式，壁纸都会自动跟随，无需本应用常驻后台。\n\n提示：若 HyperOS 开启了「锁屏画报 / 壁纸轮播」，锁屏壁纸可能会被它覆盖。建议关闭「深色模式下壁纸调暗」以获得原图效果。</string>
+</resources>
